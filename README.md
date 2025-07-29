@@ -19,6 +19,12 @@ past env on window : User variables --> path --> new --> past path
 ```
 ffmpeg -version
 ```
+### change format ffmpeg
+```
+ffmpeg -i input.mkv output.mp4
+embeded subtitle
+ffmpeg -i output.mp4 -vf "subtitles=output.srt" -c:a copy final.mp4
+```
 ### generate subtitle
 ```
 nohup whisper output.mp4 --model large-v3 --language English --output_format srt > whisper.log 2>&1 &
